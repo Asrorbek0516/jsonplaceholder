@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+.navbar {
+    width: 100%;
+    padding: 20px 40px;
+    background-color: #1e293b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* LOGO */
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* NAVIGATION */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* POSTS CONTAINER */
+.posts {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 35px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* POST CARD */
+.post-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+    transition: 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.1);
+}
+
+/* POST NUMBER */
+.post-number {
+    display: inline-block;
+    background-color: #dbeafe;
+    color: #2563eb;
+    padding: 7px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+/* USER ID */
+.user-id {
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+/* POST TITLE */
+.post-card h2 {
+    color: #1e293b;
+    font-size: 19px;
+    line-height: 1.5;
+    margin-bottom: 14px;
+    overflow-wrap: anywhere;
+}
+
+/* POST BODY */
+.post-body {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+/* TABLET */
+@media (max-width: 1000px) {
+    .posts {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 25px;
+    }
+
+    .navbar {
+        padding: 20px 25px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .posts {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
+.read-more {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 30px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.read-more:hover {
+    background-color: #1d4ed8;
+}
